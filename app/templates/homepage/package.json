@@ -1,0 +1,61 @@
+{
+  "name": "elonwu-homepage",
+  "version": "0.0.1",
+  "description": "ElonWu Template For Homepage",
+  "main": "index.js",
+  "scripts": {
+    "dll": "webpack --config webpack.vendor.js",
+    "start": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js --env buildType=release",
+    "build:test": "webpack --config webpack.prod.js --env buildType=test",
+    "stat": "webpack --profile --json > stats.json"
+  },
+  "keywords": [
+    "elonwu",
+    "template"
+  ],
+  "author": "elonwu",
+  "license": "ISC",
+  "dependencies": {
+    "@elonwu/hooks": "^0.1.1",
+    "@elonwu/utils": "^0.1.1",
+    "@elonwu/web": "^0.3.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "@commitlint/cli": "^13.2.0",
+    "@commitlint/config-conventional": "^13.2.0",
+    "axios-mock-adapter": "^1.20.0",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^6.2.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "husky": "^7.0.2",
+    "less": "^4.1.1",
+    "less-loader": "^10.0.1",
+    "lint-staged": "^11.1.2",
+    "mini-css-extract-plugin": "^2.3.0",
+    "mockjs": "^1.1.0",
+    "react-dev-utils": "^11.0.4",
+    "style-loader": "^3.2.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.21.1",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
