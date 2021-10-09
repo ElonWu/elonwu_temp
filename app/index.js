@@ -3,8 +3,6 @@ const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
 
-const APP_KEY = require('./config.key');
-
 module.exports = class extends Generator {
   // 初始化：信息提示 状态检测
   initializing() {
@@ -86,7 +84,7 @@ module.exports = class extends Generator {
     // 配置 defaultSetting;
     const stream = this.fs.read(this.templatePath(`./defaultSettings.js`));
 
-    const matchReg = new RegExp(APP_KEY, 'gi');
+    const matchReg = new RegExp(`%ELONWU%`, 'gi');
 
     const contents = stream.replace(matchReg, `${this.answers.appname}`);
 

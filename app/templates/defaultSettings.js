@@ -1,4 +1,4 @@
-const APP_KEY = require('../config.key');
+const APP_KEY = `%ELONWU%`;
 
 module.exports = {
   title: APP_KEY,
