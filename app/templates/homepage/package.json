@@ -17,9 +17,10 @@
   "author": "elonwu",
   "license": "ISC",
   "dependencies": {
-    "@elonwu/hooks": "^0.1.1",
-    "@elonwu/utils": "^0.1.1",
-    "@elonwu/web": "^0.3.2",
+    "@elonwu/hooks": "^0.1.9",
+    "@elonwu/three": "^0.0.2",
+    "@elonwu/utils": "^0.1.4",
+    "@elonwu/web": "^0.4.15",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0"
