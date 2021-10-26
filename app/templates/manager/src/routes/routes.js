@@ -1,56 +1,43 @@
-import Layout from '@/layout/Global';
+import GlobalLayout from '@/layout/Global';
 
 const routes = [
   {
     path: '/',
-    component: Layout,
+    exact: true,
+    redirect: '/main',
+  },
 
+  {
+    path: '/main',
+    component: GlobalLayout,
     routes: [
       {
-        path: '/',
+        path: '/main',
         exact: true,
-        redirect: '/bi',
+        redirect: '/main/page1',
+      },
+      {
+        path: '/main/page1',
+        title: 'page1',
+        component: '/Page1',
+        key: 'test1',
       },
 
       {
-        path: '/gm',
-        routes: [
-          {
-            path: '/gm',
-            exact: true,
-            redirect: '/gm/announcement',
-          },
-          {
-            path: '/gm/announcement',
-            title: '公告',
-            component: '/GM/Announcement',
-            key: 'announcement',
-          },
-        ],
-      },
-      {
-        path: '/bi',
-        routes: [
-          {
-            path: '/bi',
-            exact: true,
-            redirect: '/bi/overview',
-          },
-
-          {
-            path: '/bi/overview',
-            title: '主页',
-            component: '/BI/Overview',
-            key: 'overview',
-          },
-        ],
+        redirect: '/404',
       },
     ],
   },
+
   {
-    // path: '*',
-    component: '/page404',
+    path: '/404',
     title: '404',
+    component: '/Page404',
+    key: '404',
+  },
+
+  {
+    redirect: '/404',
   },
 ];
 
